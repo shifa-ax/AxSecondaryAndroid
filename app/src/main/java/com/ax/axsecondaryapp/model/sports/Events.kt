@@ -1,0 +1,48 @@
+package com.ax.axsecondaryapp.model.sports
+
+import com.google.gson.annotations.SerializedName
+
+data class Events (
+
+	@SerializedName("Eid") val eid : Int,
+//	@SerializedName("Pids") val pids : Pids,
+//	@SerializedName("Sids") val sids : Sids,
+	@SerializedName("Tr1C1") val tr1C1 : Double,
+	@SerializedName("Tr2C1") val tr2C1 : Double,
+	@SerializedName("Tr1CW1") val tr1CW1 : Int,
+	@SerializedName("Tr2CW1") val tr2CW1 : Int,
+	@SerializedName("Tr1OR") val tr1OR : Int,
+	@SerializedName("Tr2OR") val tr2OR : Int,
+	@SerializedName("Tr1CO1") val tr1CO1 : Double,
+	@SerializedName("Tr2CO1") val tr2CO1 : Double,
+	@SerializedName("T1") val t1 : ArrayList<T1>? = ArrayList(),
+	@SerializedName("T2") val t2 : ArrayList<T2>? = ArrayList(),
+//	@SerializedName("Eps") val eps : String,
+//	@SerializedName("Esid") val esid : Int,
+	@SerializedName("EpsL") val epsL : String,
+//	@SerializedName("Epr") val epr : Int,
+//	@SerializedName("Ecov") val ecov : Int,
+//	@SerializedName("Et") val et : Int,
+//	@SerializedName("EtTx") val etTx : String,
+	@SerializedName("ECo") val eCo : String,
+//	@SerializedName("TPa") val tPa : Int,
+//	@SerializedName("TCho") val tCho : Int,
+////	@SerializedName("Esd") val esd : Int,
+////	@SerializedName("Ese") val ese : Int,
+////	@SerializedName("LuUT") val luUT : Int,
+//	@SerializedName("Exd") val exd : Int,
+//	@SerializedName("Eact") val eact : Int,
+//	@SerializedName("IncsX") val incsX : Int,
+//	@SerializedName("ComX") val comX : Int,
+//	@SerializedName("LuX") val luX : Int,
+//	@SerializedName("StatX") val statX : Int,
+//	@SerializedName("SubsX") val subsX : Int,
+//	@SerializedName("SDFowX") val sDFowX : Int,
+//	@SerializedName("SDInnX") val sDInnX : Int,
+//	@SerializedName("EO") val eO : Int,
+//	@SerializedName("LuC") val luC : Int,
+//	@SerializedName("Ehid") val ehid : Int,
+//	@SerializedName("Stg") val stg : Stg,
+//	@SerializedName("Pid") val pid : Int,
+//	@SerializedName("Spid") val spid : Int
+)

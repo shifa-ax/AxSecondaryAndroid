@@ -1,0 +1,43 @@
+<resources xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+
+  <style name="blueBotton" parent="Widget.AppCompat.Button.Borderless">
+    <item name="android:elevation">5dp</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:fontFamily">@font/opensans_semi_bold</item>
+    <item name="android:textSize">15dp</item>
+    <item name="android:background">@drawable/bg_button_accent</item>
+  </style>
+
+  <style name="TextInputLayoutStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" tools:ignore="PrivateResource">
+    <item name="hintTextColor">@color/white</item>
+    <item name="android:background">@null</item>
+  </style>
+
+  <style name="FullScreenTransDialogTheme" parent="@android:style/Theme.Dialog">
+    <!-- Customize your theme here. -->
+    <item name="android:windowBackground">@color/back_alpha</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:backgroundDimEnabled">false</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
+
+  <style name="text_12_1d1d_regular">
+    <item name="android:textColor">@color/white</item>
+    <item name="android:fontFamily">@font/opensans_regular</item>
+    <item name="android:textSize">@dimen/text_size_12sp</item>
+  </style>
+
+  <style name="MyEditText" parent="Theme.AppCompat.Light">
+    <item name="colorControlNormal">@color/white</item>
+    <item name="colorControlActivated">@color/white</item>
+  </style>
+
+  <style name="text_16_1d1d_semi_bold">
+    <item name="android:textColor">@color/white</item>
+    <item name="android:fontFamily">@font/opensans_semi_bold</item>
+    <item name="android:textSize">@dimen/text_size_14sp</item>
+  </style>
+
+</resources>

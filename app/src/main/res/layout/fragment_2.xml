@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="clicka"
+            type="com.ax.axsecondaryapp.fragment.CLickFragment2" />
+
+        <variable
+            name="viewmodel"
+            type="com.ax.axsecondaryapp.viewmodel.UserViewModel" />
+
+        <variable
+            name="emailTextObserver"
+            type="com.ax.axsecondaryapp.utils.InputEditTextValidator" />
+
+        <variable
+            name="passwordTextObserver"
+            type="com.ax.axsecondaryapp.utils.InputEditTextValidator" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/black">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView58"
+            android:layout_width="@dimen/dimen_200dp"
+            android:layout_height="@dimen/dimen_200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ly_email"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_28dp"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/black"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView58">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_email"
+                style="@style/text_16_1d1d_semi_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rect_93_5_corner"
+                android:drawablePadding="@dimen/dimen_8dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dimen_12dp"
+                android:text="@={emailTextObserver.value}"
+                android:textAlignment="textStart"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@drawable/white_cursor"
+                android:theme="@style/MyEditText"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ccp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView58"
+                app:textChangedListener="@{emailTextObserver.textWatcher}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edPass"
+                    style="@style/text_16_1d1d_semi_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="@dimen/dimen_16dp"
+                    android:layout_marginTop="@dimen/dimen_28dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rect_93_5_corner"
+                    android:hint="@string/password"
+                    android:textColorHint="@color/white"
+                    android:inputType="textPassword"
+                    android:paddingHorizontal="@dimen/dimen_10dp"
+                    android:paddingVertical="@dimen/dimen_10dp"
+                    android:text="@={passwordTextObserver.value}"
+                    android:textAlignment="textStart"
+                    android:textCursorDrawable="@drawable/white_cursor"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ly_email"
+                    app:textChangedListener="@{passwordTextObserver.textWatcher}" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView107"
+            style="@style/text_12_1d1d_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_8dp"
+            android:text="@string/forgotpassword"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="@+id/ly_email"
+            app:layout_constraintStart_toStartOf="@+id/ly_email"
+            app:layout_constraintTop_toBottomOf="@+id/ly_email" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button2"
+            style="@style/blueBotton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="@dimen/dimen_26dp"
+            android:onClick="@{()->clicka.onClickContinue()}"
+            android:text="@string/login"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ly_email"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/ly_email"
+            app:layout_constraintTop_toBottomOf="@+id/edPass" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

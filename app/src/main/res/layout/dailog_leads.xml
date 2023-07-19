@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="click"
+            type="com.ax.axsecondaryapp.fragment.ClickInterfaceDialog" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView29"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:background="@drawable/black_full_round"
+            android:elevation="@dimen/dimen_4dp"
+            android:onClick="@{()->click.onClickLater()}"
+            android:padding="@dimen/dimen_8dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.794"
+            app:srcCompat="@drawable/ic_simple_cross" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_rect_93_5_corner"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.19999999">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:fontFamily="@font/opensans_bold"
+                    android:padding="@dimen/dimen_2dp"
+                    android:text="LEAD INFO"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/dimen_20dp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageView81"
+                    android:layout_width="@dimen/dimen_27dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dimen_2dp"
+                    android:layout_weight="1"
+                    android:elevation="3dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/cl_main"
+                    app:layout_constraintTop_toTopOf="@+id/cl_main"
+                    app:srcCompat="@drawable/ic_grey_cross" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider33"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/color_lC07D67"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/ed_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_8dp"
+                android:background="@null"
+                android:elevation="2dp"
+                android:gravity="start"
+                android:hint="Write the lead info ..."
+                android:minHeight="@dimen/dimen_80dp"
+                android:paddingHorizontal="@dimen/dimen_16dp"
+                android:paddingVertical="@dimen/dimen_8dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView95"
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimen_4dp"
+                android:background="@color/color_lC07D67"
+                android:onClick="@{()->click.onClickLater()}"
+                android:padding="@dimen/dimen_4dp"
+                android:paddingVertical="@dimen/dimen_16dp"
+                android:text="OK"
+                android:textAlignment="center" />
+
+            <!--      android:onClick="@{()->click.onClickView()}"-->
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
