@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         FirebaseAnalytics.getInstance(this).setAnalyticsCollectionEnabled(true)
 
 //        firebaseAnalytics = Firebase.analytics
-
+//testpush
         val bundle = Bundle()
         bundle.putBoolean("APP_OPEN", true)
         bundle.putString("USERID", "835")
